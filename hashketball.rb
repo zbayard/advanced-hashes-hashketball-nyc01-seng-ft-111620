@@ -155,3 +155,11 @@ end
 def team_names
   game_hash.map {|home_away, keys| keys[:team_name]}
 end
+
+def player_numbers(team_numbers)
+  game_hash.each do |home_away, keys|
+    if keys[:team_name] == team_numbers
+      return keys[:players].map {|player| player[:number]}
+    end
+  end
+end
