@@ -151,3 +151,7 @@ def team_colors(team)
     end
   end
 end
+
+def team_names
+  game_hash.map {|home_away, keys| keys[:team_name]}
+end
